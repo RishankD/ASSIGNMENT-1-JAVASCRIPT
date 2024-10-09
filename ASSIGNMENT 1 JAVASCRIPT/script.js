@@ -26,3 +26,24 @@ document.getElementById('generate-story').addEventListener('click', function() {
     let story = selectedWords.join(' ');
     document.getElementById('story-output').textContent = story;
 });
+document.getElementById('random-story').addEventListener('click', function() {
+    let randomStory = `${randomWord(words1)} ${randomWord(words2)} ${randomWord(words3)} ${randomWord(words4)} ${randomWord(words5)}`;
+    document.getElementById('story-output').textContent = randomStory;
+});
+
+document.getElementById('reset-story').addEventListener('click', function() {
+    selectedWords = ["", "", "", "", ""];
+    document.querySelectorAll('.word-button').forEach(btn => btn.textContent = 'Word');
+    document.getElementById('story-output').textContent = '';
+});
+
+function cycleWord(index, wordArray, outputId) {
+    let currentWord = selectedWords[index] || wordArray[0];
+    let nextWord = wordArray[(wordArray.indexOf(currentWord) + 1) % wordArray.length];
+    selectedWords[index] = nextWord;
+    document.getElementById(outputId).textContent = nextWord;
+}
+
+function randomWord(wordArray) {
+    return wordArray[Math.floor(Math.random() * wordArray.length)];
+}
