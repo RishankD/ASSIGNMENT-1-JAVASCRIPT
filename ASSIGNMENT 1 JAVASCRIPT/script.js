@@ -1,8 +1,9 @@
-const words1 = ["The cat", "A dog", "My friend", "An alien"];
-const words2 = ["jumps over", "runs to", "flies above", "sneaks around"];
-const words3 = ["the moon", "a car", "the house", "the tree"];
-const words4 = ["quickly", "slowly", "mysteriously", "excitedly"];
-const words5 = ["and disappears.", "and sleeps.", "and smiles.", "and dances."];
+const words1 = ["A wizard", "A knight", "A dragon", "A pirate"];
+const words2 = ["found", "fought", "discovered", "stole"];
+const words3 = ["a magical sword", "a treasure chest", "a secret map", "a cursed relic"];
+const words4 = ["in a forest", "on a distant island", "in a dark cave", "at the top of a mountain"];
+const words5 = ["and became a hero.", "and vanished forever.", "and started a new journey.", "and saved the kingdom."];
+
 let selectedWords = ["", "", "", "", ""];
 
 document.getElementById('btn1').addEventListener('click', function() {
@@ -19,4 +20,9 @@ document.getElementById('btn4').addEventListener('click', function() {
 });
 document.getElementById('btn5').addEventListener('click', function() {
     cycleWord(4, words5, 'btn5');
+});
+
+document.getElementById('generate-story').addEventListener('click', function() {
+    let story = selectedWords.join(' ');
+    document.getElementById('story-output').textContent = story;
 });
