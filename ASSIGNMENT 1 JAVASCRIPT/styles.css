@@ -4,3 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Body styling with a gradient background */
+body {
+    background: linear-gradient(120deg, #0288d1, #fdd835);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
