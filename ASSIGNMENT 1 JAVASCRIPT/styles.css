@@ -55,3 +55,33 @@ h1 {
     background-color: #0288d1;
     transform: scale(1.1);
 }
+/* Story box styling */
+.story-box {
+    background-color: #ffeb3b;
+    color: #212121;
+    padding: 20px;
+    font-size: 1.5rem;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    min-height: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Action buttons */
+.action-button {
+    background-color: #ff9800;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for action buttons */
+.action-button:hover {
+    background-color: #f57c00;
+}
